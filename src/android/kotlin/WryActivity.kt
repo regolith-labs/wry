@@ -58,6 +58,7 @@ abstract class WryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         create(this)
+        cacheActivityInstance(this)
     }
 
     override fun onStart() {
@@ -119,6 +120,7 @@ abstract class WryActivity : AppCompatActivity() {
     }
 
     private external fun create(activity: WryActivity)
+    private external fun cacheActivityInstance(activity: WryActivity)
     private external fun start()
     private external fun resume()
     private external fun pause()
