@@ -22,7 +22,9 @@ class Ipc(val webViewClient: RustWebViewClient) {
     companion object {
         init {
             System.loadLibrary("{{library}}")
+            cacheVm()
         }
+        @JvmStatic external fun cacheVm()
     }
 
     private external fun ipc(url: String, message: String)
