@@ -33,3 +33,6 @@
 -keep class {{package}}.RustWebChromeClient,{{package}}.RustWebViewClient {
   public <init>(...);
 }
+
+# Aggressively keep DioxusUtils and all its members
+-keep class dev.dioxus.main.DioxusUtils { *; }
