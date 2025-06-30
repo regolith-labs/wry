@@ -25,6 +25,7 @@ class Ipc(val webViewClient: RustWebViewClient) {
             cacheVm()
         }
         @JvmStatic external fun cacheVm()
+        @JvmStatic external fun sendPublicKey(publicKey: String)
     }
 
     private external fun ipc(url: String, message: String)
